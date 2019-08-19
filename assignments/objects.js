@@ -100,32 +100,44 @@ console.log(intern5.multiplyNums(3,4));
 const parent = {
   name: "Susan",
   Age:70,
+  speak() {
+    return `Hello, my name is ${this.name}`;
+  },
 
   child:{
     name: "George",
     Age: 50,
+    speak() {
+      return `Hello, my name is ${this.name}`;
+    },
 
     grandchild: {
       name:"Sam",
       Age:30,
+      speak() {
+        return `Hello, my name is ${this.name}`;
+      },
     }
   }
-  
+
+
 }
 
+
 // Log the parent object's name
-console.log();
+console.log(parent.name);
 
 // Log the child's age
-console.log(parent.child.name);
+console.log(parent.child.Age);
 
 // Log the name and age of the grandchild
-console.log();
+console.log(`Grand child's Name is ${parent.child.grandchild.name} while his Age is ${parent.child.grandchild.Age}` );
 
 // Have the parent speak
-console.log();
+console.log(parent.speak());
 
 // Have the child speak
-console.log();
+console.log(parent.child.speak());
 
 // Have the grandchild speak
+console.log(parent.child.grandchild.speak());
