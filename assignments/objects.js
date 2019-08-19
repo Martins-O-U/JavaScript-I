@@ -105,13 +105,16 @@ const parent = {
     name: "George",
     Age: 50,
 
-    grandchild: "Sam",
-    Age:30,
+    grandchild: {
+      name:"Sam",
+      Age:30,
+    }
   }
+  
 }
 
 // Log the parent object's name
-console.log(parent.name);
+console.log();
 
 // Log the child's age
 console.log(parent.child.name);
